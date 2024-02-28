@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunting Phone API</title>
+    <!-- Daisy Ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+  </head>
+  <body>
+    <header class="bg-[#e8f1ff]">
+      <section class="max-w-6xl mx-auto pb-56">
+        <div class="flex justify-between py-10">
+          <h1 class="text-2xl font-bold">Hot Gadgets</h1>
+          <button class="btn btn-primary">Sing Up</button>
+        </div>
+        <div class="banner-content text-center text-black space-y-5 pb-12">
+          <h3 class="font-extrabold text-6xl font-raleway">
+            Apple Iphone 13 Pro Max
+          </h3>
+          <p class="text-sm font-inter">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority <br />
+            have suffered alteration in some form, by injected humou.
+          </p>
+          <button class="btn text-sm font-semibold btn-primary border-none">
+            <a href="#paribohon">Buy Now</a>
+          </button>
+        </div>
+      </section>
+    </header>
+    <main class="mt-7 max-w-6xl mx-auto">
+      <section class="flex justify-center items-end -mt-72 pb-7">
+        <img
+          class="w-[250px] h-[438px]"
+          src="img/iphone-x-600x598.png"
+          alt=""
+        />
+        <img
+          class="w-[320px] h-[585px]"
+          src="img/iphone-x-600x598.png"
+          alt=""
+        />
+        <img
+          class="w-[250px] h-[438px]"
+          src="img/iphone-x-600x598.png"
+          alt=""
+        />
+      </section>
+      <section class=" ">
+        <h1 class="text-4xl font-semibold text-center">Search your phone</h1>
+        <div class="flex justify-center items-center gap-4 p-4 m-5">
+          <input
+            id="search-field"
+            type="text"
+            placeholder="search"
+            class="input input-bordered w-full max-w-xl bg-gray-100"
+          />
+          <button onclick="handleSearch()" class="btn btn-active btn-accent">
+            Search
+          </button>
+        </div>
+      </section>
+      <!-- Search Result -->
+      <section>
+        <!-- Loading progress -->
+        <div id="loading-spinner" class="text-center hidden my-40">
+          <span class="loading loading-spinner loading-md"></span>
+        </div>
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
+        ></div>
+        <!-- show all button -->
+        <div id="show-all-container" class="text-center hidden my-4">
+          <button onclick="handleShowAll()" class="btn btn-active btn-accent">
+            Show All
+          </button>
+        </div>
+      </section>
+
+      <!-- Show details modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog
+        id="show_details_modal"
+        class="modal modal-bottom sm:modal-middle"
+      >
+        <div class="modal-box">
+          <h3 id="show-detail-phone-name" class="font-bold text-2xl"></h3>
+          <div id="show-detail-container"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer class="bg-[#e8f1ff] mt-10">
+      <div class="max-w-6xl mx-auto py-20">
+        <div class="flex justify-between items-center border-b-2 border-gray-200 py-5">
+          <div class="space-y-3">
+            <h1 class="text-4xl font-bold">Hot Gadgets</h1>
+            <p class="text-sm font-bold text-[#a1a3a5]">
+              You can definitely work.
+            </p>
+          </div>
+          <div class="flex justify-center items-center gap-5">
+            <div class="flex justify-center items-center gap-4 text-2xl">
+            <div class=" border-2 border-dashed border-gray-300 px-2 rounded-lg">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+              <div class=" border-2 border-dashed border-gray-300 px-2 rounded-lg">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class=" border-2 border-dashed border-gray-300 px-2 rounded-lg">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </div>
+            <button class="btn btn-primary">Join Premium</button>
+          </div>
+        </div>
+        <div class="flex justify-between pt-8">
+          <h1 class="text-base font-medium">
+            Product <br />
+            Browse jobs <br />
+            Remote jobs <br />
+            Startup jobs <br />
+            Company jobs
+          </h1>
+          <h1 class="text-base font-medium">
+            Popular <br />
+            UIUX Design <br />
+            Product Design <br />
+            Back-End Developer <br />
+            Front-End Developer
+          </h1>
+          <h1 class="text-base font-medium">
+            Resource <br />
+            Faq <br />
+            Support <br />
+            Privacy Policy <br />
+            Terms of Service
+          </h1>
+          <h1 class="text-base font-medium">
+            Company <br />
+            About Us <br />
+            Contact Us <br />
+            Career Tips <br />
+            Careers
+          </h1>
+        </div>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="js/phone.js"></script>
+  </body>
+</html>
