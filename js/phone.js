@@ -79,13 +79,26 @@ const showPhoneDetails = (phone) => {
   console.log(phone);
   // const phoneName = document.getElementById("show-detail-phone-name");
   // phoneName.innerText = phone.name;
-  const showDetailContainer = document.getElementById('show-detail-container')
-  showDetailContainer.innerHTML=`
-  <img src="${phone.image}" alt="">
+  const showDetailContainer = document.getElementById("show-detail-container");
+  showDetailContainer.innerHTML = `
+  <div class="flex justify-center pb-4"><img src="${phone.image}" alt=""></div>
   <h1 class="font-bold text-3xl">${phone.name}</h1>
-  <p><span class="text-lg font-semibold">Stroage:</span>${phone?.mainFeatures?.storage}</p>
-  <p><span class="text-lg font-semibold">GPS:</span> ${phone?.others?.GPS}</p>
-  `
+  <p><span class="text-lg font-semibold">Stroage:</span>${
+    phone?.mainFeatures?.storage
+  }</p>
+  <p><span class="text-lg font-semibold">GPS:</span> ${
+    phone?.others?.GPS || "Not Gps This Mobile"
+  }</p>
+  <p><span class="text-lg font-semibold">Display_Size:</span> ${
+    phone?.mainFeatures?.displaySize
+  }</p>
+  <p><span class="text-lg font-semibold">Memory:</span> ${
+    phone?.mainFeatures?.memory
+  }</p>
+  <p><span class="text-lg font-semibold">Slug:</span> ${phone?.slug}</p>
+  <p><span class="text-lg font-semibold">ReleaseDate:</span> ${phone?.releaseDate}</p>
+  <p><span class="text-lg font-semibold">Brand:</span> ${phone?.brand}</p>
+  `;
   // show the modal
   show_details_modal.showModal();
 };
